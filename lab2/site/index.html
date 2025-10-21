@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя библиотека</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="./img/logo.png" alt="Логотип" />
+        <span class="site-name">Моя библиотека</span>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="#" onclick="showAlert('Библиотека')">Библиотека</a></li>
+          <li><a href="#" onclick="showAlert('Полка желаний')">Полка желаний</a></li>
+          <li><a href="#" onclick="showAlert('Друзья')">Друзья</a></li>
+          <li><button class="login-btn" onclick="showAlert('Личный кабинет')">Войти</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section search">
+      <h3>Поиск по сайту</h3>
+      <form id="searchForm">
+        <input type="text" placeholder="Введите запрос..." required>
+        <button type="submit">Найти</button>
+      </form>
+    </section>
+
+    <section class="section section-hello">
+      <div>
+        <h1>Добро пожаловать в домашнюю библиотеку</h1>
+        <p>
+          Это веб-приложение предназначено для учёта книг в домашней библиотеке и ведения списка книг, которые вы хотели бы приобрести.
+        </p>
+      </div>
+      <div></div>
+    </section>
+
+    <section class="section info">
+      <h1>Заголовок</h1>
+      <p>
+        Контент
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo-footer">
+        <img src="./img/logo.png" alt="Логотип" />
+        <p>&copy; 2025 Моя библиотека. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      alert("Функция поиска пока недоступна.");
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>
