@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книги с кофе</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="./img/logo.png" alt="Логотип" />
+        <span class="site-name">Книги с кофе</span>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="#" onclick="showAlert('Библиотека')">Библиотека</a></li>
+          <li><a href="#" onclick="showAlert('Полка желаний')">Полка желаний</a></li>
+          <li><a href="#" onclick="showAlert('Друзья')">Друзья</a></li>
+          <li><button class="login-btn" onclick="showAlert('Личный кабинет')">Войти</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="searchSection" class="section">
+      <div class="conteiner search">
+        <h2>Поиск по сайту</h2>
+        <form id="searchForm">
+          <input type="text" placeholder="Введите запрос..." required>
+          <button type="submit">Найти</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="welcomeSection" class="section">
+      <div class="conteiner section-hello">
+        <div>
+          <h1>Добро пожаловать в домашнюю библиотеку</h1>
+          <p>
+            Это веб-приложение предназначено для учёта книг в домашней библиотеке и ведения списка книг, которые вы хотели бы приобрести.
+          </p>
+        </div>
+        <div></div>
+      </div>
+    </section>
+
+    <section id="statsSection" class="section info">
+      <h1>Статистика библиотеки</h1>
+      <div class="conteiner">
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th data-col="0">Жанр</th>
+              <th data-col="1">Количество книг</th>
+              <th data-col="2">Прочитано</th>
+              <th data-col="3">В процессе</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Фэнтези</td>
+              <td>42</td>
+              <td>21</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Детективы</td>
+              <td>18</td>
+              <td>10</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Научпоп</td>
+              <td>30</td>
+              <td>15</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <section id="librarySection" class="section info">
+      <h1>Библиотека</h1>
+      <div class="conteiner grid">
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+      </div>
+    </section>
+
+    <section id="wishlistSection" class="section info">
+      <h1>Полка желаний</h1>
+      <div class="conteiner grid">
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+      </div>
+    </section>
+
+    <section id="friendsSection" class="section info">
+      <h1>Друзья</h1>
+      <div class="conteiner">
+        <ul class="list">
+          <li>
+            <div class="avatar-list"></div>
+            Тимур Дек
+          </li>
+          <li>
+            <div class="avatar-list"></div>
+            Алиса Чудесная
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="notificationsSection" class="section info">
+      <h1>Уведомления</h1>
+      <div class="conteiner asides-box">
+        <aside class="info-box" data-popup="На этой неделе добавлено 5 новых книг">
+          Обновления недели
+        </aside>
+
+        <aside class="info-box" data-popup="Доступно 3 новых обзора книг">
+          Новые обзоры
+        </aside>
+      </div>
+    </section>
+
+    <section id="feedbackSection" class="section info feedback">
+      <h1>Обратная связь</h1>
+
+      <form id="supportForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="message" rows="4" placeholder="Cообщение..." required></textarea>
+
+        <div class="btns">
+          <input type="reset" value="Очистить">
+          <input type="submit" value="Отправить">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo-footer">
+        <img src="./img/logo.png" alt="Логотип" />
+        <p>&copy; 2025 Книги с кофе. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      alert("Функция поиска пока недоступна.");
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>
