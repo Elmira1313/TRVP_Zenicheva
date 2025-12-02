@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Записная книжка — органайзер</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="conteiner">
+      <section class="card" id="calendarCard">
+        <div class="cal-header">
+          <button class="nav-btn" id="prevBtn">◀</button>
+          <div class="month-title" id="monthLabel">Месяц Год</div>
+          <button class="nav-btn" id="nextBtn">▶</button>
+        </div>
+
+        <div class="weekdays">
+          <div>Пн</div>
+          <div>Вт</div>
+          <div>Ср</div>
+          <div>Чт</div>
+          <div>Пт</div>
+          <div>Сб</div>
+          <div>Вс</div>
+        </div>
+
+        <div class="calendarGrid" id="calendarGrid"></div>
+
+        <div class="legend">
+          <span class="legend-item">
+            <span class="legend-square legend-today"></span>
+            Сегодня
+          </span>
+          <span class="legend-item">
+            <span class="legend-square legend-has-tasks"></span>
+            Есть дела
+          </span>
+        </div>
+      </section>
+
+
+      <aside class="card panel" id="taskPanel">
+        <h3 id="panelTitle">Выберите дату</h3>
+
+        <div class="tasks" id="tasksList">
+          <div class="no-tasks">Планов нет</div>
+        </div>
+
+        <form id="taskForm" class="task-form">
+          <div class="form-row">
+            <input type="text" id="taskText" placeholder="Краткое дело" required>
+            <button class="btn" type="submit">Добавить</button>
+          </div>
+        </form>
+
+        <textarea id="taskNotes" class="notes-area" placeholder="Подробнее о деле"></textarea>
+
+        <div class="controls">
+          <button class="btn secondary" id="clearDayBtn">Очистить день</button>
+          <button class="btn secondary" id="clearAllBtn">Очистить все</button>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+</body>
+</html>
